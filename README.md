@@ -4,6 +4,12 @@ Multilingual IT incident desk for the Great Indian AI Internship Challenge. A pe
 
 Speech-to-text and text-to-speech are live calls to `https://api.vachana.ai`. Category, severity, urgency, duplicate matching, and troubleshooting steps run locally on the transcript. Demonstration rows in the dashboard are labeled Sample and were not produced by Gnani.
 
+## Live Demo
+
+**Try VaaniTriage here:** [https://vaani-triage-ai.streamlit.app/](https://vaani-triage-ai.streamlit.app/)
+
+The application is publicly accessible. No installation or local setup is required to try the live demo.
+
 ## What the desk does
 
 - Record or upload a clip in a supported Indian language, or type the report.
@@ -18,7 +24,7 @@ Speech-to-text and text-to-speech are live calls to `https://api.vachana.ai`. Ca
 
 ## Project layout
 
-```
+```text
 app.py                  Streamlit entry point
 vaani/gnani_client.py   Prisma v3.0 and Timbre v2.5 client
 vaani/interface.py      Pages
