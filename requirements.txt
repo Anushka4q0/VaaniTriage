@@ -1,0 +1,9 @@
+streamlit>=1.40,<2
+requests>=2.32
+pandas>=2.2
+python-dotenv>=1.0
+scikit-learn>=1.5
+numpy>=1.26
+mutagen>=1.47
+imageio-ffmpeg>=0.5
+pytest>=8.0
