@@ -27,9 +27,26 @@ def api_base() -> str:
     return os.getenv("GNANI_API_BASE", DEFAULT_API_BASE).strip().rstrip("/") or DEFAULT_API_BASE
 
 
+# def api_key() -> str:
+#     load_env()
+#     return os.getenv("GNANI_API_KEY", "").strip()
+
 def api_key() -> str:
     load_env()
-    return os.getenv("GNANI_API_KEY", "").strip()
+
+    # First check environment variables
+    key = os.getenv("GNANI_API_KEY", "").strip()
+
+    if key:
+        return key
+
+    # If not found, check Streamlit Secrets
+    try:
+        import streamlit as st
+        return str(st.secrets.get("GNANI_API_KEY", "")).strip()
+    except Exception:
+        return ""
+
 
 
 def db_path() -> Path:
